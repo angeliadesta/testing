@@ -1,0 +1,50 @@
+Scenarionya sebagai berikut:
+1. Fitur Login Gmail
+- Buatlah 1 email baru
+	email:akupunyaemail.stella@gmail.com
+	password: akupunyaemail
+- Buatlah list test case. Minimal 10 test case untuk uji coba fitur login.
+  ( input username & password ; output login berhasil atau tidak )
+	| 	username		| password	|
+	|akupunyaemail.stella@gmail.com	|akupunyaemail	|
+	|siapapunyaemail@gmail.com	|siapaya02	|
+	|mencobaemailbaru@gmail.com	|1sukses1	|
+	|restuortujelas@gmail.com	|jelasjelas22	|
+	|setiaporangjoin@gmail.com	|happy202	|
+	|085712390231			|4ku4d4l4h	|
+	|081741923153			|wewewewe	|
+	|089991114442			|hellow		|
+	|083458726340			|kelihatannya	|
+	|082907928643			|jqamcnsku2	|
+	|092137128			|soipopw79a	|
+- Untuk setiap test case buatlah scenario testing cucumbernya.
+Feature: Gmail login
+
+  Scenario: Gmail login scenario
+    Given I am Gmail user
+    When I put correct username and correct password
+      And I click on the login button
+    Then must be successful
+      And the home page will appear 
+
+  Scenario: Gmail login scenario
+    Given I am Gmail user
+    When I put correct phonenumber and correct password
+      And I click on the login button
+    Then must be successful
+    And the home page will appear 
+
+
+2. ( SOAL BONUS ) Fitur Search Email di Gmail
+- Buatlah list test case search. 2 Test case. ( input: keyword, output: email yang dicari ada atau tidak )
+	| input		| output	|
+	| Jobdesk	| ada		|
+	| surma		| tidak ada	|
+- Untuk setiap test case buatlah scenario testing cucumbernya.
+	Feature : Search Mail on Gmail
+	Scenario: Gmail search scenario
+    		Given I am Gmail user
+    	When I put email that I search
+      		And I click on the search button
+    	Then must be successful
+    		And show the results 
